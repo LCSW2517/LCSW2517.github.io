@@ -1,0 +1,6 @@
+#special-top-section {
+  background: url("../images/about-hero-2.jpeg");
+  /* height: 50vh; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}

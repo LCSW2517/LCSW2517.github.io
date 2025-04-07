@@ -1,0 +1,125 @@
+/* About Page Style */
+
+section {
+  padding: 20px 0;
+}
+
+section p {
+  /* max-width: 60%; */
+}
+
+section h1,
+h2 {
+  margin-bottom: 20px;
+}
+
+#about-hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../images/about-hero-2.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain, cover;
+  background-position: center;
+  width: 100%;
+  color: var(--primary);
+  
+}
+
+#about-hero-section .content h1 {
+  font-weight: 800;
+  color: var(--secondary);
+  text-shadow: 1px 1px 2px black;
+}
+
+#about-hero-section .content p {
+  max-width: 50%;
+  color: var(--secondary);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#story-section {
+  background: var(--secondary);
+}
+
+
+#story-section .content {
+  flex: 1;
+}
+
+#story-section .content img {
+  align-self: flex-start;
+}
+
+#story-section h2 {
+  font-weight: 700;
+}
+
+.img-text-wrapper img {
+  width: 200px;
+}
+
+section .img-text-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+/* Reasons to Shop */
+
+#shop-with-us p {
+  max-width: 80%;
+}
+
+.reasons-to-shop-list {
+  list-style-type: none;
+  counter-reset: custom-counter;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 10px;
+}
+
+.reasons-to-shop-list li {
+  counter-increment: custom-counter;
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.reasons-to-shop-list li::before {
+  content: counter(custom-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-color: var(--accent);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.reasons-to-shop-list li:hover::before {
+  background-color: var(--accent);
+}
+
+@media screen and (max-width: 580px) {
+
+  #story-section .img-text-wrapper, #guarantee-section .img-text-wrapper {
+    flex-direction: column !important;
+  }
+
+  #story-section .img-text-wrapper img {
+    width: 100% !important;
+  }
+ 
+  .reasons-to-shop-list {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  
+}
